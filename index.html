@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> personal portfolio !</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6af50233dc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="lg.png" class="logo">
+            <ul id="sidemenu">
+<li><a href="#header">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#Services">Services</a></li>
+<li><a href="#Contact">Contact</a></li>
+
+<i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Website Designer</p>
+            <h1> Hi,I am <span>Komal Chaudhary</span><br> from India</h1>
+        </div>
+    
+        </div>
+   
+    </div>
+
+    <!--     about   -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photo - Copy.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>HI,I am Komal chaudhary.I belong to Faridabad,Harayana .Currently I am trying to enhance my coding skills in java,dsa and web applications.I am passionate and curious enough to look forward to work with you and uplift myself in this domain. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            
+                            <li><span>UI/UX</span><br>Designing website interfaces</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>DBMS</span><br>Database Management</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            
+                            <li><span>2017</span><br>10th from CBSE-cgpa:10</li>
+                            <li><span>2019</span><br>12th PCM from CBSE-grade:83.8%</li>
+                            <li><span>2022</span><br>BCA from MDU University-grade:74.1%</li>
+                            <li><span>2025</span><br>MCA from HBTU,Kanpur-cgpa:8.96 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------services-------->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+<div>
+<i class="fa-solid fa-code"></i>
+    <h2>
+    Web Design
+</h2>
+<p>
+    It usually refers to the user experience aspects of website development rather than software development.user experience is central to web designing process.
+</p>
+<a href="#">Learn More</a>
+</div>
+
+<div>
+<i class="fa-solid fa-crop"></i>
+    <h2>
+    UI/UX Design
+</h2>
+<p>
+    UI interface refers to interactivity look and feel of a product screen or web page.UX covers user overall experience with product.UI/UX involves the look of product
+<a href="#">Learn More</a>
+</div>
+            </div>
+        </div>
+    </div>
+    <!--       contact       -->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i>komalme7@gmail.com</p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>Phone no:70700*****</p>
+                    <div class="social-icons">
+                        <a href="www.linkedin.com/in/komal-chaudhary-463745220"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/komal0077"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://leetcode.com/komal700/"><i class="fa-regular fa-square-code"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg">Hello !</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ kelvin.Made with
+                <i class="fa-solid fa-heart"></i> Easy tutorials.</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+}
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwW2XKlqTmbt7ADg11vI-gm-V8fk8np53zXbiL0kUzipt8OM-X65RsHtqFYwiXrYPCcww/exec'
+        const form = document.forms['submit-to-google-sheet']
+      const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML="msg sent successfully !"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
